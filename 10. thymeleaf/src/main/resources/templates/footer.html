@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>$Title$</title>
+</head>
+<body>
+<!--    We can pass dynamic value from controller also LIKE THIS::::::==========-->
+<!--<footer id="fragmentTag" th:fragment="footer1(${title}, ${subTitle})">-->
+    <footer id="fragmentTag" th:fragment="footer1(title, subTitle)">
+        <h6 th:text="${title}"></h6>
+        <h6 th:text="${subTitle}"></h6>
+        <h4>Contact us</h4>
+        <h4>Copyright 2021</h4>
+        <h4>FROM FOOTER TEMPLATE</h4>
+    </footer>
+</body>
+</html>
