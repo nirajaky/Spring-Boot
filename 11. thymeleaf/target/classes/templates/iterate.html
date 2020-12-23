@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Iteration in Thymeleaf</title>
+</head>
+<body>
+    <h1>This is iteration page</h1>
+    <p th:text = "${names}"></p>
+<!--    Iteration using th:each-->
+    <ul>
+        <li th:each="n,status : ${names}">
+            <span th:style="${status.odd} ? 'font-weight:bold; color:red;': 'color:blue' " th:text="${status.index} + ' : ' + ${n}"></span>
+        </li>
+    </ul>
+</body>
+</html>

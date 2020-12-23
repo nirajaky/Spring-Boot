@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>This is a service page to shocase include , insert, and replace</h1>
+    <h3>FROM SERVICE TEMPLATE with th:replace</h3>
+    <footer th:replace="footer::footer1('This is title', 'This is subTitle : with replace')">
+        <h1>FROM SERVICE TEMPLATE with th:replace</h1>
+    </footer>
+
+    <h3>FROM SERVICE TEMPLATE with th:insert</h3>
+    <footer th:insert="footer::footer1('This is title', 'This is subTitle : with insert')">
+        <h1>FROM SERVICE TEMPLATE with th:insert</h1>
+    </footer>
+
+    <h3>FROM SERVICE TEMPLATE with th:include</h3>
+    <footer th:include="footer::footer1('This is title', 'This is subTitle : with include')">
+        <h1>FROM SERVICE TEMPLATE with th:include</h1>
+    </footer>
+</body>
+</html>
